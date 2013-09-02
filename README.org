@@ -1,0 +1,32 @@
+* Stop Sign
+  Expand `dbg` to a line of debugging code that stops your program.
+** Why?
+   A lot of people develop muscle memory with vim, so having a standard
+   abbreviation that's not specific to any filetype allows you to use that
+   abbreviation all the time without thinking about it.
+** Changing what `dbg` is replaced with
+   You can add support for a new filetype (or override the default for
+   a supported filetype) with the following code:
+   #+BEGIN_SRC vim
+   let g:stopsign_replacements = {
+       \ 'javascript': 'debugger;'
+       \ }
+   #+END_SRC
+   A few notes about this:
+    1. You don't need to specify filetypes you're not changing (this
+       is merged with the defaults, it doesn't overwrite them)
+    2. If you think this abbreviation might be useful to others, check
+       if it's already supported, and make a pull request! (see
+       CONTRIBUTING for more info).
+** Don't like `dbg`?
+   If you want to abbreviate something other than `dbg`, simply set:
+   #+BEGIN_SRC vim
+   let g:stopsign_trigger = 'stop'
+   #+END_SRC
+** Thanks
+   Working on the execellent [[https://github.com/amdt/vim-niji][vim-niji]] and working with [[https://github.com/tpope/vim-endwise][vim-endwise]] has
+   helped me learn more vim script. Thanks to both of those authors.
+** License
+   Same as vim itself. See:
+   http://vimdoc.sourceforge.net/htmldoc/uganda.html#license
+   Or `:help license` from within vim.

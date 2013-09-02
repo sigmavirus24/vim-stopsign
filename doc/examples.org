@@ -1,0 +1,13 @@
+* Examples
+  These are some alternatives to the default expansions that you might
+  want to include in your ~/.vimrc. See the README for info on how to
+  do this.
+** Ruby
+*** Ruby debugger
+    - [[https://github.com/cldwalker/debugger][Home Page]]
+    - Stop Sign integration:
+        #+BEGIN_SRC vim
+        let g:stopsign_replacements = {
+            \ 'ruby': "require 'debugger'; debugger",
+            \ }
+        #+END_SRC

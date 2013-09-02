@@ -1,0 +1,35 @@
+* Contributing
+  Thanks for wanting to help! Here's how you can get starting
+  contributing to this plugin:
+  1. Fork the project
+  2. Clone your fork
+  3. Get the latest from upstream: `git remote add upstream
+     https://github.com/joshuarh/vim-stop-sign.git && git merge
+     --rebase upstream`
+  4. (optional) Make a topic branch: `git checkout my-cool-new-feature`
+  5. Write some code!
+  6. Make a pull request
+** Changing default debugger completions
+   Generally, we shouldn't need to change any default completions,
+   because you can simply add to the `g:stopsign_replacements`
+   dictionary in your ~/.vimrc. If the overwhelming majority wants a
+   change then that's fine (:+1: the issue to 'vote' for it).
+
+   If the majority doesn't want a new abbreviation, and you think it
+   still might be useful to others, please add it (with any
+   disclamers, links to tutorials, and attributions) to
+   doc/examples.org (see the file for an example of this).
+** Changing the default abbreviation target (`dbg`)
+   Unless a lot of people want this, it'll stay at `dbg`. I chose this
+   abbreviation because:
+
+   1. It's easy to remember
+   2. It's short
+   3. It doesn't often get typed (so it won't be accidentally
+      expanded)
+
+   Note: you can change your own abbreviation target by adding:
+   #+BEGIN_SRC vim
+   let g:stopsign_trigger = 'stop'
+   #+END_SRC
+   See the README for more info.
