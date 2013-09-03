@@ -9,6 +9,7 @@ endif
 
 let s:stopsign_replacement_defaults = {
       \ 'javascript': 'debugger;',
+      \ 'python': 'import pdb; pdb.set_trace()',
       \ 'ruby': "require 'pry'; binding.pry;"
       \ }
 
